@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    //Añadimos el plugin Safe Args para poder pasar datos entre fragmentos del framework Navigation
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -36,6 +38,8 @@ android {
 }
 
 dependencies {
+   //Añadimos la versión del framework de Navigation dentro de una variable
+    val nav_version = "2.7.7"
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -45,4 +49,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    //Añadimos las dependencias usadas para implementar el framework de Navigation
+    // y usamos la variable con la versión del framework
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
 }
