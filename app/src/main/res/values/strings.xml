@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">Memy</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="settings">Ajustes</string>
+    <string name="agenda">Agenda</string>
+    <string name="notes">Notas</string>
+    <string name="calendar">Calendario</string>
+    <string name="tasks">Tareas</string>
 </resources>

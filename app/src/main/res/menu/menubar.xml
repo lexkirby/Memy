@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/agendaFragment"
+        android:icon="@drawable/agenda_book_light"
+        android:title="@string/agenda" />
+
+    <item
+        android:id="@+id/mainCalendarFragment"
+        android:icon="@drawable/calendar_icon"
+        android:title="@string/calendar" />
+
+    <item
+        android:id="@+id/tasksFragment"
+        android:icon="@drawable/task_check"
+        android:title="@string/tasks" />
+
+    <item
+        android:id="@+id/notesFragment"
+        android:icon="@drawable/notes_pencil"
+        android:title="@string/notes" />
+
+
+</menu>

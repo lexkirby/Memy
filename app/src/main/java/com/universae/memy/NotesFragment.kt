@@ -9,7 +9,7 @@ import android.view.ViewGroup
 
 
 
-class AgendaFragment : Fragment() {
+class NotesFragment : Fragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +23,6 @@ class AgendaFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_agenda, container, false)
+        return inflater.inflate(R.layout.fragment_notes, container, false)
     }
 }
-
