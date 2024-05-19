@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
@@ -8,32 +7,32 @@
 
     <fragment
         android:id="@+id/mainCalendarFragment"
-        android:name="com.universae.memy.MainCalendarFragment"
+        android:name="com.universae.memy.fragments.MainCalendarFragment"
         android:label="Calendar"
         tools:layout="@layout/fragment_main_calendar" />
 
     <fragment
         android:id="@+id/tasksFragment"
-        android:name="com.universae.memy.TasksFragment"
+        android:name="com.universae.memy.fragments.TasksFragment"
         android:label="Tasks"
         tools:layout="@layout/fragment_tasks" />
 
     <fragment
         android:id="@+id/notesFragment"
-        android:name="com.universae.memy.NotesFragment"
+        android:name="com.universae.memy.fragments.NotesFragment"
         android:label="Notes"
         tools:layout="@layout/fragment_notes" />
 
     <fragment
         android:id="@+id/agendaFragment"
-        android:name="com.universae.memy.AgendaFragment"
+        android:name="com.universae.memy.fragments.AgendaFragment"
         android:label="Agenda"
         tools:layout="@layout/fragment_agenda" />
 
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.universae.memy.SettingsFragment"
+        android:name="com.universae.memy.fragments.SettingsFragment"
         android:label="Settings"
-        android:layout="@layout/fragment_settings"/>
+        android:layout="@layout/fragment_settings" />
 
 </navigation>

@@ -3,11 +3,17 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     //Añadimos el plugin Safe Args para poder pasar datos entre fragmentos del framework Navigation
     id("androidx.navigation.safeargs.kotlin")
+    id("kotlin-kapt")
+
 }
 
 android {
     namespace = "com.universae.memy"
     compileSdk = 34
+
+    buildFeatures {
+        dataBinding = true
+    }
 
     defaultConfig {
         applicationId = "com.universae.memy"
@@ -35,11 +41,14 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+
 }
 
 dependencies {
    //Añadimos la versión del framework de Navigation dentro de una variable
     val nav_version = "2.7.7"
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -54,4 +63,17 @@ dependencies {
     // y usamos la variable con la versión del framework
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+
+    val room_version = "2.6.1"
+    val lifecycle_version = "2.7.0"
+
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
+    implementation("androidx.room:room-runtime:$room_version")
+    implementation("androidx.room:room-ktx:$room_version")
+    kapt("androidx.room:room-compiler:$room_version")
+
+
 }

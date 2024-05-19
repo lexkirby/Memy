@@ -1,14 +1,16 @@
-package com.universae.memy
+package com.universae.memy.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.universae.memy.R
 
 
+class SettingsFragment : Fragment() {
 
-class TasksFragment : Fragment() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -20,6 +22,6 @@ class TasksFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tasks, container, false)
+        return inflater.inflate(R.layout.fragment_settings, container, false)
     }
 }

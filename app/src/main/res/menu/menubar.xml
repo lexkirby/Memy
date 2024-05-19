@@ -4,6 +4,7 @@
     <item
         android:id="@+id/agendaFragment"
         android:icon="@drawable/agenda_book_light"
+        android:enabled="true"
         android:title="@string/agenda" />
 
     <item
