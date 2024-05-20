@@ -16,25 +16,26 @@ abstract class MemyDatabase : RoomDatabase() {
     abstract val taskInt: TaskDAO
     abstract val noteInt: NoteDAO
 
-    companion object
-    @Volatile
-    private var INSTANCE: MemyDatabase? = null
+    companion object {
+        @Volatile
+        private var INSTANCE: MemyDatabase? = null
 
-    @OptIn(InternalCoroutinesApi::class)
-    fun getInstance(context: Context): MemyDatabase {
-        synchronized(this) {
-            var instance = INSTANCE
-            if (instance == null) {
-                instance = Room.databaseBuilder(
-                    context.applicationContext,
-                    MemyDatabase::class.java,
-                    "memy_database"
-                ).build()
-                INSTANCE = instance
+        @OptIn(InternalCoroutinesApi::class)
+        fun getInstance(context: Context): MemyDatabase {
+            synchronized(this) {
+                var instance = INSTANCE
+                if (instance == null) {
+                    instance = Room.databaseBuilder(
+                        context.applicationContext,
+                        MemyDatabase::class.java,
+                        "memy_database"
+                    ).build()
+                    INSTANCE = instance
 
+                }
+                return instance
             }
-            return instance
         }
-    }
 
+    }
 }

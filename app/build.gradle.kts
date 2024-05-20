@@ -1,3 +1,5 @@
+
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
@@ -14,6 +16,7 @@ android {
     buildFeatures {
         dataBinding = true
     }
+
 
     defaultConfig {
         applicationId = "com.universae.memy"

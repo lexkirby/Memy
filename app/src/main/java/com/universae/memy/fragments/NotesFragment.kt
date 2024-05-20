@@ -1,15 +1,20 @@
 package com.universae.memy.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.universae.memy.R
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import com.universae.memy.database.MemyDatabase
+import com.universae.memy.databinding.FragmentNotesBinding
+import com.universae.memy.viewModel.NoteVM
+import com.universae.memy.viewModelFactory.NoteVMF
 
 
 class NotesFragment : Fragment() {
-
+    private var _binding: FragmentNotesBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +27,21 @@ class NotesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_notes, container, false)
+        _binding = FragmentNotesBinding.inflate(inflater,container,false)
+        val view = binding.root
+        val application = requireNotNull(this.activity).application
+        val daoNote = MemyDatabase.getInstance(application).noteInt
+        val viewModelFactory = NoteVMF(daoNote)
+        val viewModel = ViewModelProvider(this, viewModelFactory).get(NoteVM::class.java)
+
+        binding.viewModel = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner
+
+        return view
     }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
 }
