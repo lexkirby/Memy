@@ -8,19 +8,19 @@
     <fragment
         android:id="@+id/mainCalendarFragment"
         android:name="com.universae.memy.fragments.MainCalendarFragment"
-        android:label="Calendar"
+        android:label="Calendario"
         tools:layout="@layout/fragment_main_calendar" />
 
     <fragment
         android:id="@+id/tasksFragment"
         android:name="com.universae.memy.fragments.TasksFragment"
-        android:label="Tasks"
+        android:label="Tareas"
         tools:layout="@layout/fragment_tasks" />
 
     <fragment
         android:id="@+id/notesFragment"
         android:name="com.universae.memy.fragments.NotesFragment"
-        android:label="Notes"
+        android:label="Notas"
         tools:layout="@layout/fragment_notes" />
 
     <fragment
@@ -32,7 +32,7 @@
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.universae.memy.fragments.SettingsFragment"
-        android:label="Settings"
+        android:label="Ajustes"
         android:layout="@layout/fragment_settings" />
 
 </navigation>

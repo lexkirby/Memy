@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/widgets">
+        <menu>
+            <group android:checkableBehavior="single"
+                android:id="@+id/widgets">
+                <item
+                    android:id="@+id/menstrualCalendar"
+                    android:title="@string/menstrual" />
+
+                <item
+                    android:id="@+id/podometer"
+                    android:title="@string/podometer" />
+
+                <item
+                    android:id="@+id/expenses"
+                    android:title="@string/expenses" />
+
+            </group>
+        </menu>
+
+    </item>
+
+
+</menu>

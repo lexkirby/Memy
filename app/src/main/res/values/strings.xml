@@ -8,4 +8,23 @@
     <string name="notes">Notas</string>
     <string name="calendar">Calendario</string>
     <string name="tasks">Tareas</string>
+    <string name="widgets">Widgets</string>
+    <string name="menstrual">Calendario menstrual</string>
+    <string name="podometer">Podómetro</string>
+    <string name="expenses">Gastos</string>
+
+    <string name="agenda_events">Tus eventos de hoy</string>
+    <string name="agenda_tasks">Tus tareas de hoy</string>
+    <string name="agenda_hint1">Eventos de calendario irán insertados aquí</string>
+    <string name="agenda_hint2">Tareas de hoy irán insertadas aquí</string>
+
+    <string name="calendar_events">Eventos</string>
+
+    <string name="notes_title">Título</string>
+    <string name="notes_hint">Escribe aquí tu nota</string>
+    <string name="notes_save">Guardar nota</string>
+
+    <string name="tasks_hint">Escribe aquí tu tarea</string>
+    <string name="tasks_save">Añadir</string>
+
 </resources>
