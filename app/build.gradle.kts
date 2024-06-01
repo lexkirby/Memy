@@ -3,9 +3,8 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    //Añadimos el plugin Safe Args para poder pasar datos entre fragmentos del framework Navigation
-    id("androidx.navigation.safeargs.kotlin")
-    id("kotlin-kapt")
+
+    id("kotlin-kapt")    //Añadimos como plugin el compilador que usa Room Database
 
 }
 
@@ -14,7 +13,7 @@ android {
     compileSdk = 34
 
     buildFeatures {
-        dataBinding = true
+        dataBinding = true //Añadimos el soporte para usar dataBinding para la unión de los ViewModels con los fragmentos
     }
 
 
@@ -49,8 +48,7 @@ android {
 }
 
 dependencies {
-   //Añadimos la versión del framework de Navigation dentro de una variable
-    val nav_version = "2.7.7"
+   implementation(libs.androidx.preference) //Añadimos la librería Preference para su uso con los ajustes
 
 
     implementation(libs.androidx.core.ktx)
@@ -62,11 +60,14 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    //Añadimos las dependencias usadas para implementar el framework de Navigation
-    // y usamos la variable con la versión del framework
+    /*Añadimos las librerías de Navigation para poder implementar la navegación entre componentes
+     y usamos la variable con la versión de librería para poder cambiarlo fácilmente de ser necesario */
+    val nav_version = "2.7.7"
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
 
+    /*Añadimos las librerías de Room y Lifecycle para poder implementar la base de datos y las demás partes
+    * del diseño MVVM */
     val room_version = "2.6.1"
     val lifecycle_version = "2.7.0"
 
@@ -78,7 +79,12 @@ dependencies {
     implementation("androidx.room:room-ktx:$room_version")
     kapt("androidx.room:room-compiler:$room_version")
 
+    /*Añadimos la librería de RecyclerView para definir cómo mostrar todos los objetos de
+    la base de datos con adaptadores */
     val recycler_version = "1.3.2"
     implementation("androidx.recyclerview:recyclerview:$recycler_version")
 
+    /*Añadimos la librería de Preference para su uso con el fragmento de ajustes */
+    val preference_version = "1.2.0"
+    implementation("androidx.preference:preference-ktx:1.2.0")
 }

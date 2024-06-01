@@ -27,4 +27,8 @@
     <string name="tasks_hint">Escribe aquí tu tarea</string>
     <string name="tasks_save">Añadir</string>
 
+    <string name="preference_notifT">Permitir notificaciones</string>
+    <string name="preference_feedbackT">Enviar feedback</string>
+    <string name="preference_feedbackC">Envía reportes de problemas técnicos o sugerencias</string>
+
 </resources>

@@ -33,6 +33,6 @@
         android:id="@+id/settingsFragment"
         android:name="com.universae.memy.fragments.SettingsFragment"
         android:label="Ajustes"
-        android:layout="@layout/fragment_settings" />
+        android:layout="@xml/preferences" />
 
 </navigation>

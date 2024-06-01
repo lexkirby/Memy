@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.SettingsFragment">
+
+    <SwitchPreferenceCompat
+        app:key="notifications"
+        app:title="@string/preference_notifT"/>
+
+    <Preference
+        app:key="feedback"
+        app:title="@string/preference_feedbackT"
+        app:summary="@string/preference_feedbackC"/>
+
+</androidx.preference.PreferenceScreen>

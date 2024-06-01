@@ -1,10 +1,10 @@
 package com.universae.memy.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.universae.memy.R
 
 
@@ -21,7 +21,7 @@ class AgendaFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        /*Hinchamos el layout xml correspondiente a AgendaFragment */
         return inflater.inflate(R.layout.fragment_agenda, container, false)
     }
 }
