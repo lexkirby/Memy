@@ -11,9 +11,10 @@ import com.universae.memy.taskData.TaskDAO
 import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.internal.synchronized
 
-/*Creamos una clase abstracta que extienda de la clase RoomDatabase, la marcamos como base de datos con la anotación @Database,
-* le pasamos como entities las clases que hemos marcado como tablas, le indicamos la versión de la
-* base de datos y marcamos como false el exportar el schema de la base de datos */
+/*Creamos una clase abstracta que extienda de la clase RoomDatabase, la marcamos como base de datos
+con la anotación @Database, le pasamos como entities las clases que hemos marcado como tablas,
+le indicamos la versión de la base de datos y marcamos como false el exportar el schema
+de la base de datos */
 @Database(entities = [Task::class, Note::class], version = 1, exportSchema = false)
 abstract class MemyDatabase : RoomDatabase() {
 

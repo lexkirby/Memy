@@ -86,5 +86,5 @@ dependencies {
 
     /*Añadimos la librería de Preference para su uso con el fragmento de ajustes */
     val preference_version = "1.2.0"
-    implementation("androidx.preference:preference-ktx:1.2.0")
+    implementation("androidx.preference:preference-ktx:$preference_version")
 }
